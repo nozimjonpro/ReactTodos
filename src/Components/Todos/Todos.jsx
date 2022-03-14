@@ -30,20 +30,6 @@ function Todos() {
     setTodos([...todos]);
   };
 
-  const getElementByType = (event, array) => {
-    if (event === "All") {
-      return array;
-    }
-
-    if (event === "Active") {
-      return array.filter((t) => !t.isCompleted);
-    }
-
-    if (event === "Completed") {
-      return array.filter((t) => t.isCompleted);
-    }
-  };
-
   const getTodosByType = (_type, _todos) => {
     if (_type === "all") {
       return _todos;
